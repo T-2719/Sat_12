@@ -78,17 +78,16 @@ $last_page = floor(($count_all / $count_per_page)) + 1;
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/bbs.css">
-    <title>掲示板</title>
+	<title>掲示板</title>
 </head>
 <body>
+<div id="b_color">
 <div id="wrapper">
-
-
+<span id="change_color" class="material-icons">lightbulb</span>
 <h1>掲示板</h1>
-<!--<button type="button" onclick="changeCSS()">ダークモード</button>-->
   <!-- フォームのPOST先はこのファイル自身にする -->
   <div class="contents">
   <h2>投稿</h2>
@@ -124,8 +123,6 @@ $last_page = floor(($count_all / $count_per_page)) + 1;
   <?php endforeach; ?>
   
     <?php $j_a = json_encode($link_array); ?>
-  </div>
-</div>
 
 <div class="pages">
   <a href="?page=1">最初</a>
@@ -137,6 +134,9 @@ $last_page = floor(($count_all / $count_per_page)) + 1;
     <a href="?page=<?= $page + 1 ?>"> 次ページ </a>
   <?php endif; ?>
   <a href="?page=<?= $last_page ?>">最後</a>
+</div>
+
+</div>
 </div>
 <button id="scroll-to-top-btn">≫</button>
 <script>
@@ -163,9 +163,6 @@ $last_page = floor(($count_all / $count_per_page)) + 1;
 	var mat1 = str.replace(re, "<a href='#$&'>$&</a>"); // 対象をaタグで加工
 	org.innerHTML = mat1; // 中身を戻す
   }
-  function changeCSS(){
-    document.getElementById("wrapper").classList.add("changeColor");
-}
 //ボタン
 const scroll_to_top_btn = document.querySelector('#scroll-to-top-btn');
 
@@ -175,8 +172,6 @@ scroll_to_top_btn.addEventListener( 'click' , scroll_to_top );
 function scroll_to_top(){
 	window.scroll({top: 0, behavior: 'smooth'});
 };
-
-
 //スクロール時のイベントを追加
 window.addEventListener( 'scroll' , scroll_event );
 
@@ -187,7 +182,10 @@ function scroll_event(){
 	}else	if(window.pageYOffset < 400){
 		scroll_to_top_btn.style.opacity = '0';
 	}
-	
+};
+
+document.getElementById("change_color").onclick = function(){
+    document.getElementById("b_color").classList.toggle("changeColor");
 };
 </script>
 </body>

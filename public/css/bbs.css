@@ -58,19 +58,20 @@ h3{
 	padding-top:30px;
 	margin-top:-30px;
 }
-.changeColor{
+#b_color{
+	background-color:white;
+}
+#b_color.changeColor{
     background-color:black;
     color: white;
 }
-.changeColor a{
+#b_color.changeColor a{
 	color:yellow;
 }
-
-@media screen and (max-width: 700px) {
-	img {
-		max-width:90%;
-	}
-	#scroll-to-top-btn{
+.material-icons-outlined{
+	font-size: 50px;
+}
+#scroll-to-top-btn{
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
@@ -86,4 +87,34 @@ h3{
 	opacity: 0;
 	transition-duration: 0.5s;
 }
+
+
+
+.material-icons{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	height: 50px;
+	width: 50px;
+	text-align:center;
+	vertical-align:bottom;
+	font-size: 32px;
+	border: none;
+
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+	#scroll-to-top-btn{
+		display:none;
+	}
+	
+}
+@media screen and (max-width: 699px) {
+	img {
+		max-width:90%;
+	}
+	
 }
