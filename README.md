@@ -1,4 +1,4 @@
-##2021年 システム開発 前期課題 掲示板サービス 構築手順書
+## 2021年 システム開発 前期課題 掲示板サービス 構築手順書
 依存ソフトウェア
 この掲示板サービスを構築・実行するには，以下のソフトウェアが必要です。各環境にあわせて予め導入しておいてください。
 
@@ -25,11 +25,11 @@ docker exec -it mysql mysql techc
 テーブルを作成するSQLは以下の通りです。
 
 
-``CREATE TABLE `bbs`(
-    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `body` TEXT NOT NULL,
-    `image_filename` TEXT DEFAULT NULL,
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
+``CREATE TABLE `bbs`(  
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,  
+    `body` TEXT NOT NULL,  
+    `image_filename` TEXT DEFAULT NULL,  
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP  
 );
 ``
 
