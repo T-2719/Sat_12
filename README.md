@@ -10,7 +10,9 @@ Docker Compose
 まずソースコードの設置を行います。
 
 
-git clone git@github.com:T-2719/Sat_12.git
+``git clone git@github.com:T-2719/Sat_12.git``
+
+
 ## 2. ビルドと起動
 Docker Composeで管理するDockerコンテナ上で実行します。
 
@@ -25,7 +27,7 @@ docker exec -it mysql mysql techc
 テーブルを作成するSQLは以下の通りです。
 
 
-``CREATE TABLE `bbs`(
+    ``CREATE TABLE `bbs`(
     `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `body` TEXT NOT NULL,
     `image_filename` TEXT DEFAULT NULL,
