@@ -27,13 +27,13 @@ docker exec -it mysql mysql techc
 テーブルを作成するSQLは以下の通りです。
 
 
-    ``CREATE TABLE `bbs`(
-    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `body` TEXT NOT NULL,
-    `image_filename` TEXT DEFAULT NULL,
-    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-``
+    CREATE TABLE `bbs`(
+      `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      `body` TEXT NOT NULL,
+      `image_filename` TEXT DEFAULT NULL,
+      `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
 
 ## 4. 動作確認
 掲示板のページは public/bbs.php です。ブラウザから http://サーバーのアドレス/bbs.php にアクセスし，動作を確認してください。
